@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles.css">
+        <script>
+            const ROOM_ID = "<%= roomID %>";
+            let USERNAME;
+            while (true){
+                USERNAME = prompt('Enter you name: ');
+                if (USERNAME){
+                    break;
+                }
+
+            }
+
+            function share(){
+                alert(`Copy the meeting link: localhost:3000/room/${ROOM_ID}/`)
+            }
+        </script>
+        <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+        <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous" defer></script>
+        <script src="/script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="video-grid"></div>
+        <div id="users">
+            <p>Participants</p>
+            <div id="users-list">
+
+            </div>
+        </div>
+        <div style="margin-left: 100px;" id="chat-box">
+            <form id="chat-form">
+                <div class="message-text">
+
+                </div>
+                <input id="message" placeholder="Message">
+                <button>Send</button>
+            </form>
+        </div>
+        <button onclick="share()">Share Meeting Link</button>
+    </body>
+</html>
