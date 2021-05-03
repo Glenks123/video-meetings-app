@@ -8,8 +8,9 @@ cd to the directory and run
 ```
 npm install
 ```
+to install all npm packages.
 
-Run the PeerJS server
+Run the PeerJS server in another tab
 
 ```
 peerjs --port 3001
