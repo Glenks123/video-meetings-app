@@ -1,5 +1,5 @@
-# videoconferencingapp
-Video conferencing app made using SocketIO, PeerJS and WebRTC's
+# videomeetingsapp
+Video communcication app made using SocketIO, PeerJS and WebRTC's
 
 Download the source code, then unzip it.
 
