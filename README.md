@@ -1,5 +1,5 @@
 # videomeetingsapp
-Video communcication app made using SocketIO, PeerJS and WebRTC's
+Video communication app made using SocketIO, PeerJS and WebRTC's
 
 Download the source code, then unzip it.
 
