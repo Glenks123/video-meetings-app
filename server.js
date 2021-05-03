@@ -21,8 +21,7 @@ app.get('/room/:id', (req, res) => {
 
 io.on('connection', socket => {
     socket.on('join-room', (roomID, userID, username) => {
-        //console.log(roomID, username ,userID);
-        // if there is already a roomID, push the newUser details there, else create a new roomID then add users to that room everytime
+
         if (users[roomID]){
             users[roomID].push({id: userID, name: username, video: true, audio: true})
         }else{
@@ -40,7 +39,6 @@ io.on('connection', socket => {
         socket.on('chatMessage', message => {
             // getting the username of the person who has sent the message
              const userName = users[roomID].filter(user => user.id === userID)[0].name;
-            // receives the message then sends back to client-side in order to visualize it
             io.in(roomID).emit('message', userName, message);
         });
 
