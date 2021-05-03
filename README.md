@@ -1,2 +1,2 @@
-# video-conferencingapp-nodejs
+# video-conferencing-nodejs
 Video conferencing app made using SocketIO, PeerJS and WebRTC's
