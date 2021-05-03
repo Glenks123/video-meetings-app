@@ -8,7 +8,7 @@ cd to the directory and run
 ```
 npm install
 ```
-to install all npm packages.
+to install required npm packages.
 
 Run the PeerJS server in another tab
 
